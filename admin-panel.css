@@ -1,0 +1,12 @@
+.content {
+    margin: 10px 100px;
+}
+
+.card {
+    width: 300px;
+}
+
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+}

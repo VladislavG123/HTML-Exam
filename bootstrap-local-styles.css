@@ -1,0 +1,15 @@
+:root {
+    --primary: #05aecc;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary :hover {
+    background: white;
+    border-color: var(--primary);
+    transition: 1s;
+    color: var(--primary);
+}
