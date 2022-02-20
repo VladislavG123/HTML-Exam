@@ -190,12 +190,30 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="js/feedback-form.js"></script>
+    <script src="js/cart.js"></script>
 
     <script>
+        let products = JSON.parse(localStorage.getItem("f-products"))
 
+        for (const product of products) {
+            let imageId = Math.floor(Math.random() * 4) + 1;
+            $("#f-products").append(`
+                <div class="featured-product">
+                    <img src="img/pr-2-${imageId}.png" alt="${imageId}">
+                    <div class="product-info">
+                        <h3>${product.title}</h3>
+                        <p class="desc-text">${product.details}</p>
+                        <div class="sell-box">
+                            <i class="fas fa-exchange-alt"></i>
+                            <i class="fas fa-gift"></i>
+                            <i class="fas fa-shopping-cart add-product-to-card-button" product_id=\"${product.id}\"></i>
+                            <p>\$${product.price}.<sup>00</sup></p>
+                        </div>
+                    </div>
+                </div>`)
+        }
 
     </script>
 
-    <script src="js/cart.js"></script>
 </body>
 </html>
