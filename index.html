@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
     <title>Shop</title>
+    <script src="js/feedback-form.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -99,59 +100,8 @@
                 </div>
             </div>
 
-            <div class="product-container">
-                <div class="featured-product">
-                    <img src="img/pr-2-1.png" alt="">
-                    <div class="product-info">
-                        <h3>Product Title here</h3>
-                        <p class="desc-text">Short Description here</p>
-                        <div class="sell-box">
-                            <i class="fas fa-exchange-alt"></i>
-                            <i class="fas fa-gift"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                            <p class="buy-block-price">$99.<sup>00</sup></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured-product">
-                    <img src="img/pr-2-2.png" alt="">
-                    <div class="product-info">
-                        <h3>Product Title here</h3>
-                        <p class="desc-text"> Short Description here</p>
-                        <div class="sell-box">
-                            <i class="fas fa-exchange-alt"></i>
-                            <i class="fas fa-gift"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                            <p class="buy-block-price">$99.<sup>00</sup></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured-product">
-                    <img src="img/pr-2-3.png" alt="">
-                    <div class="product-info">
-                        <h3>Product Title here</h3>
-                        <p class="desc-text">Short Description here</p>
-                        <div class="sell-box">
-                            <i class="fas fa-exchange-alt"></i>
-                            <i class="fas fa-gift"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                            <p class="buy-block-price">$99.<sup>00</sup></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="featured-product">
-                    <img src="img/pr-2-4.png" alt="">
-                    <div class="product-info">
-                        <h3>Product Title here</h3>
-                        <p class="desc-text">Short Description here</p>
-                        <div class="sell-box">
-                            <i class="fas fa-exchange-alt"></i>
-                            <i class="fas fa-gift"></i>
-                            <i class="fas fa-shopping-cart"></i>
-                            <p>$99.<sup>00</sup></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="product-container" id="f-products">
+
             </div>
         </div>
 
@@ -161,19 +111,19 @@
                 <h3>Contact us</h3>
             </div>
 
-            <form>
+            <form id="feedback-form">
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email address</label>
-                    <input placeholder="some@email.your" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <label for="InputEmail" class="form-label">Email address</label>
+                    <input placeholder="some@email.your" required type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
                     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
                     <label for="InputName" class="form-label">Your name: </label>
-                    <input type="text" placeholder="Name" class="form-control" id="InputName">
+                    <input type="text" placeholder="Name" required class="form-control" id="InputName">
                 </div>
                 <div class="mb-3">
                     <label for="InputDetails" class="form-label">Details</label>
-                    <textarea placeholder="Details" class="form-control" id="InputDetails"></textarea>
+                    <textarea placeholder="Details" required class="form-control" id="InputDetails"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send</button>
             </form>
@@ -237,5 +187,15 @@
         <br>
         <br>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="js/feedback-form.js"></script>
+
+    <script>
+
+
+    </script>
+
+    <script src="js/cart.js"></script>
 </body>
 </html>
