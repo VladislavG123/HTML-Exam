@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="bootstrap-local-styles.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <title>Checkout</title>
+    <title>Wishlist</title>
 </head>
 <body>
 <div class="wrapper">
@@ -55,7 +55,7 @@
 
     <div class="checkout-card">
         <div class="heading">
-            <h3>Your card</h3>
+            <h3>Your wishlist</h3>
         </div>
 
         <table class="table">
@@ -66,59 +66,12 @@
                 <th scope="col">Price</th>
             </tr>
             </thead>
-            <tbody id="products-in-cart-list">
+            <tbody id="products-in-wish-list">
 
             </tbody>
         </table>
     </div>
 
-    <div class="checkout-form">
-        <div class="heading">
-            <h3>Checkout</h3>
-        </div>
-
-        <form action="POST" class="col-6 mx-auto" id="checkout-form">
-            <div class="row">
-                <div class="mb-3 col-6">
-                    <label for="InputName" class="form-label">Your name: </label>
-                    <input type="text" placeholder="Name" class="form-control" id="InputName">
-                </div>
-                <div class="mb-3 col-6">
-                    <label for="InputlastName" class="form-label">Your lastname: </label>
-                    <input type="text" placeholder="Lastname" class="form-control" id="InputlastName">
-                </div>
-            </div>
-            <div class="mb-3 col-12">
-                <label for="address" class="form-label">Address: </label>
-                <input type="text" placeholder="Address" class="form-control" id="address">
-            </div>
-            <hr>
-            <div class="row">
-                <div class="mb-3 col-8">
-                    <label for="card-number" class="form-label">Card number: </label>
-                    <input type="number" placeholder="Card number" class="form-control" id="card-number">
-                </div>
-                <div class="mb-3 col-4">
-                    <label for="insp-date" class="form-label">Inspiration date: </label>
-                    <input type="number" placeholder="Card number" class="form-control" id="insp-date">
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 col-8">
-                    <label for="holder-name" class="form-label">Holder name: </label>
-                    <input type="text" placeholder="Holder Name" class="form-control" id="holder-name">
-                </div>
-                <div class="mb-3 col-4">
-                    <label for="cvv" class="form-label">CVV: </label>
-                    <input type="number" placeholder="CVV" maxlength="3" class="form-control" id="cvv">
-                </div>
-            </div>
-            <div class="row">
-                <input type="submit" class="btn btn-primary" value="Buy">
-            </div>
-
-        </form>
-    </div>
 </div>
 <footer>
     <div class="nav-list">
@@ -180,18 +133,7 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-<script src="js/cart.js"></script>
-<script>
-    $("#checkout-form").submit(() => {
-        localStorage.setItem("cart", "[]")
+<script src="js/wishlist.js"></script>
 
-        new Audio("mixkit-alert-quick-chime-766.wav").play()
-            .then(_ => {
-                alert(`Thanks for purchase! Click OK to reload page`)
-                window.location.reload();
-            } );
-        return false;
-    })
-</script>
 </body>
 </html>

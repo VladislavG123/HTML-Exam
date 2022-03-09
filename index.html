@@ -32,8 +32,8 @@
                             <li><a href="#">Some button</a></li>
                             <li><a href="#">Register</a></li>
                             <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Whislost<i class="fas fa-gift"></i></a></li>
-                            <li><a href="#">Cart<i class="fas fa-shopping-cart"></i></a></li>
+                            <li><a href="wishlist.html">Whislist<i class="fas fa-gift"></i></a></li>
+                            <li><a href="checkout.html">Cart<i class="fas fa-shopping-cart"></i></a></li>
                         </ul>
                     </nav>
                 </div>
@@ -191,6 +191,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="js/feedback-form.js"></script>
     <script src="js/cart.js"></script>
+    <script src="js/wishlist.js"></script>
 
     <script>
         let products = JSON.parse(localStorage.getItem("f-products"))
@@ -205,13 +206,31 @@
                         <p class="desc-text">${product.details}</p>
                         <div class="sell-box">
                             <i class="fas fa-exchange-alt"></i>
-                            <i class="fas fa-gift"></i>
+                            <i class="fas fa-gift add-product-to-wish-button" product_id=\"${product.id}\"></i>
                             <i class="fas fa-shopping-cart add-product-to-card-button" product_id=\"${product.id}\"></i>
                             <p>\$${product.price}.<sup>00</sup></p>
                         </div>
                     </div>
                 </div>`)
         }
+
+        let direction = true
+        let position = 6
+
+        window.setInterval(() => {
+            position = + direction ? 1 : -1
+
+            $(".sale").style = `${position}px`
+
+            if (direction && position >= 100) {
+                direction = false
+            }
+
+            if (!direction && position < 5) {
+                direction = true
+            }
+
+        }, 200)
 
     </script>
 

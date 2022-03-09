@@ -1,5 +1,4 @@
 window.setTimeout(() => {
-    console.log(123)
     $(".add-product-to-card-button").each((index, item) => {
         item.onclick = () => {
             let cardContent = JSON.parse(localStorage.getItem("cart"))
